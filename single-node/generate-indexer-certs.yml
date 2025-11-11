@@ -5,6 +5,10 @@ services:
     hostname: wazuh-certs-generator
     environment:
       - CERT_TOOL_VERSION=4.14
+      - HTTP_PROXY=b.alucky.icu:3128
+
+
     volumes:
       - ./config/wazuh_indexer_ssl_certs/:/certificates/
       - ./config/certs.yml:/config/certs.yml
+  
